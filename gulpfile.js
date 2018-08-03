@@ -35,8 +35,20 @@ gulp.task('copy-html', function(){
         .pipe(gulp.dest(''));
 });
 
+gulp.task('copy-imgs', function(){
+    gulp.src('img/*')
+        .pipe(gulp.dest('dist/img'));
+});
+
+gulp.task('copy-fonts', function(){
+    gulp.src('fonts/*')
+        .pipe(gulp.dest('dist/fonts'));
+});
+
 gulp.task('build',[
     'styles',
     'scripts',
-    'copy-html'
+    'copy-html',
+    'copy-imgs',
+    'copy-fonts'
 ]);
