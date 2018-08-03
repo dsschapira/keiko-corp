@@ -29,25 +29,14 @@ gulp.task('scripts', function(){
 });
 
 gulp.task('copy-html', function(){
-    gulp.src('./index.html')
+    gulp.src('./index_working.html')
+        .pipe(concat('index.html'))
         .pipe(minHTML({collapseWhitespace: true, caseSensitive: true}))
-        .pipe(gulp.dest('dist'));
-});
-
-gulp.task('copy-imgs', function(){
-    gulp.src('img/*')
-        .pipe(gulp.dest('dist/img'));
-});
-
-gulp.task('copy-fonts', function(){
-    gulp.src('fonts/*')
-        .pipe(gulp.dest('dist/fonts'));
+        .pipe(gulp.dest(''));
 });
 
 gulp.task('build',[
     'styles',
     'scripts',
-    'copy-html',
-    'copy-imgs',
-    'copy-fonts'
+    'copy-html'
 ]);
