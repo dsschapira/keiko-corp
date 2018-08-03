@@ -22,7 +22,7 @@ gulp.task('scripts', function(){
         'js/nicescroll.js',
         'js/main.js',
         'js/scrollTo.js'
-    ])
+        ])
         .pipe(concat('logic.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
