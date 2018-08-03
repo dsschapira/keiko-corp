@@ -1,2 +1,2 @@
 # keiko-corp
-The greatest company ever created
+Part of the Udemy junior to senior fullstack course
